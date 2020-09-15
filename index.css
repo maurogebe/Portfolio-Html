@@ -21,14 +21,14 @@ body {
     text-decoration: none;
     position: relative;
     right: 20%;
-    width: 58px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     display: inline-block;
-    background-color: blue;
+    background-color: #ffb400;
     margin-top: 10px;
     border-radius: 50px;
-    padding-left: 15px;
-    padding-top: 13px;
+    padding-left: 12px;
+    padding-top: 11px;
 }
 .nav__menu-home span::before {
     content: url("./imagenes/Home.png");
@@ -42,19 +42,20 @@ body {
 .nav__menu-home a:hover h2 {
     display: inline-block;
     color: white;
-    transition: display 1s;
-    background: blue;
+    background: #ffb400;
+    right: 100%;
+    transition: right 1s;
 }
 .nav__menu-home h2 {
     display: none;
     padding-right: 20%;
     padding-left: 25%;
-    padding-top: 28%;
+    padding-top: 19%;
     position: absolute;
-    right: 100%;
+    right: 0%;
     bottom: 0;
     border-radius: 50px 0 0 50px;
-    padding-bottom: 28%;
+    padding-bottom: 19%;
 }
 .nav__menu-about span::before {
     content: url("./imagenes/Home.png");
@@ -69,18 +70,18 @@ body {
     display: inline-block;
     color: white;
     transition: color 1s;
-    background: blue;
+    background: #ffb400;
 }
 .nav__menu-about h2 {
     padding-right: 20%;
     padding-left: 25%;
-    padding-top: 28%;
+    padding-top: 19%;
     display: none;
     position: absolute;
     right: 100%;
     bottom: 0;
     border-radius: 50px 0 0 50px;
-    padding-bottom: 28%;
+    padding-bottom: 19%;
 }
 .nav__menu-portfolio span::before {
     content: url("./imagenes/Home.png");
@@ -95,18 +96,18 @@ body {
     display: inline-block;
     color: white;
     transition: color 1s;
-    background: blue;
+    background: #ffb400;
 }
 .nav__menu-portfolio h2 {
     padding-right: 20%;
     padding-left: 25%;
-    padding-top: 28%;
+    padding-top: 19%;
     display: none;
     position: absolute;
     right: 100%;
     bottom: 0;
     border-radius: 50px 0 0 50px;
-    padding-bottom: 28%;
+    padding-bottom: 19%;
 }
 .nav__menu-contact span::before {
     content: url("./imagenes/Home.png");
@@ -121,18 +122,18 @@ body {
     display: inline-block;
     color: white;
     transition: color 1s;
-    background: blue;
+    background: #ffb400;
 }
 .nav__menu-contact h2 {
     padding-right: 20%;
     padding-left: 25%;
-    padding-top: 28%;
+    padding-top: 19%;
     display: none;
     position: absolute;
     right: 100%;
     bottom: 0;
     border-radius: 50px 0 0 50px;
-    padding-bottom: 28%;
+    padding-bottom: 19%;
 }
 .nav__menu-blog span::before {
     content: url("./imagenes/Home.png");
@@ -147,17 +148,17 @@ body {
     display: inline-block;
     color: white;
     transition: color 1s;
-    background: blue;
+    background: #ffb400;
 }
 .nav__menu-blog h2 {
     padding-right: 20%;
     padding-left: 25%;
-    padding-top: 28%;
+    padding-top: 19%;
     display: none;
     position: absolute;
     right: 100%;
     bottom: 0;
     border-radius: 50px 0 0 50px;
-    padding-bottom: 28%;
+    padding-bottom: 19%;
 }
 
