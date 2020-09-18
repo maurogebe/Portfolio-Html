@@ -1,3 +1,7 @@
+:root {
+    --red-color: red;
+    background: var (--red-color);
+}
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +13,7 @@ body {
     background: #111;
 }
 
+/* Header */
 .nav {
     position: fixed;
     right: 0;
@@ -24,10 +29,35 @@ body {
     width: 50px;
     height: 50px;
     display: inline-block;
-    background-color: #ffb400;
+    background-color: #2b2a2a;
     margin-top: 10px;
     border-radius: 50px;
     padding-top: 10px;
+}
+.active a {
+    background-color: #ffb400;
+}
+.nav__menu h4 {
+    color: transparent;
+    padding-right: 20%;
+    padding-left: 25%;
+    padding-top: 32%;
+    position: absolute;
+    right: 60%;
+    bottom: 0;
+    border-radius: 50px 0 0 50px;
+    padding-bottom: 32%;
+}
+.nav__menu a:hover h4 {
+    display: inline-block;
+    color: white;
+    background: #ffb400;
+    right: 100%;
+    transition: right 0.3s, color 1s;
+}
+.nav__menu a:hover {
+    border-radius: 0px 50px 50px 0px;
+    background-color: #ffb400;
 }
 .nav__menu-home span::before {
     content: url("./imagenes/Home.png");
@@ -36,55 +66,12 @@ body {
     position: relative;
     right: 2px;
 }
-.nav__menu-home a:hover {
-    border-radius: 0px 50px 50px 0px;
-    /* transition: border-radius 0.5s; */
-}
-.nav__menu-home a:hover h4 {
-    display: inline-block;
-    color: white;
-    background: #ffb400;
-    right: 100%;
-    transition: right 0.3s;
-}
-.nav__menu-home h4 {
-    background-color: transparent;
-    padding-right: 20%;
-    padding-left: 25%;
-    padding-top: 30%;
-    position: absolute;
-    right: 60%;
-    bottom: 0;
-    border-radius: 50px 0 0 50px;
-    padding-bottom: 30%;
-}
 .nav__menu-about span::before {
     content: url("./imagenes/About.png");
     display: inline-block;
     border-radius: 30px;
     position: relative;
     right: 2px;
-}
-.nav__menu-about a:hover {
-    border-radius: 0px 50px 50px 0px;
-    /* transition: border-radius 0.5s; */
-}
-.nav__menu-about a:hover h4 {
-    display: inline-block;
-    color: white;
-    transition: color 1s;
-    background: #ffb400;
-}
-.nav__menu-about h4 {
-    padding-right: 20%;
-    padding-left: 25%;
-    padding-top: 30%;
-    display: none;
-    position: absolute;
-    right: 100%;
-    bottom: 0;
-    border-radius: 50px 0 0 50px;
-    padding-bottom: 30%;
 }
 .nav__menu-portfolio span::before {
     content: url("./imagenes/Portfolio.png");
@@ -93,54 +80,12 @@ body {
     position: relative;
     right: 2px;
 }
-.nav__menu-portfolio a:hover {
-    border-radius: 0px 50px 50px 0px;
-    /* transition: border-radius 0.5s; */
-}
-.nav__menu-portfolio a:hover h4 {
-    display: inline-block;
-    color: white;
-    transition: color 1s;
-    background: #ffb400;
-}
-.nav__menu-portfolio h4 {
-    padding-right: 20%;
-    padding-left: 25%;
-    padding-top: 30%;
-    display: none;
-    position: absolute;
-    right: 100%;
-    bottom: 0;
-    border-radius: 50px 0 0 50px;
-    padding-bottom: 30%;
-}
 .nav__menu-contact span::before {
     content: url("./imagenes/Contact.png");
     display: inline-block;
     border-radius: 30px;
     position: relative;
     right: 2px;
-}
-.nav__menu-contact a:hover {
-    border-radius: 0px 50px 50px 0px;
-    /* transition: border-radius 0.5s; */
-}
-.nav__menu-contact a:hover h4 {
-    display: inline-block;
-    color: white;
-    transition: color 1s;
-    background: #ffb400;
-}
-.nav__menu-contact h4 {
-    padding-right: 20%;
-    padding-left: 25%;
-    padding-top: 30%;
-    display: none;
-    position: absolute;
-    right: 100%;
-    bottom: 0;
-    border-radius: 50px 0 0 50px;
-    padding-bottom: 30%;
 }
 .nav__menu-blog span::before {
     content: url("./imagenes/Home.png");
@@ -149,25 +94,17 @@ body {
     position: relative;
     right: 2px;
 }
-.nav__menu-blog a:hover {
-    border-radius: 0px 50px 50px 0px;
-    /* transition: border-radius 0.5s; */
-}
-.nav__menu-blog a:hover h4 {
-    display: inline-block;
-    color: white;
-    transition: color 1s;
-    background: #ffb400;
-}
-.nav__menu-blog h4 {
-    padding-right: 20%;
-    padding-left: 25%;
-    padding-top: 30%;
-    display: none;
-    position: absolute;
-    right: 100%;
-    bottom: 0;
-    border-radius: 50px 0 0 50px;
-    padding-bottom: 30%;
+.home__background-dinamic {
+    background-color: #ffb400;
+    position: fixed;
+    height: 200%;
+    width: 100%;
+    transform: rotate(-15deg);
+    left: -83%;
+    top: -50%;
 }
 
+/* Imagen */
+.home__background-dinamic {
+    background-image: url(./imagenes/Imagen-de-prueba.jpg);
+}
