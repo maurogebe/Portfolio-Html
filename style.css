@@ -60,28 +60,28 @@ body {
     background-color: #ffb400;
 }
 .nav__menu-home span::before {
-    content: url("./imagenes/Home.png");
+    content: url("https://i.imgur.com/I9mFSdh.png");
     display: inline-block;
     border-radius: 30px;
     position: relative;
     right: 2px;
 }
 .nav__menu-about span::before {
-    content: url("./imagenes/About.png");
+    content: url("https://i.imgur.com/TIkXgl2.png");
     display: inline-block;
     border-radius: 30px;
     position: relative;
     right: 2px;
 }
 .nav__menu-portfolio span::before {
-    content: url("./imagenes/Portfolio.png");
+    content: url("https://i.imgur.com/f5cNIU1.png");
     display: inline-block;
     border-radius: 30px;
     position: relative;
     right: 2px;
 }
 .nav__menu-contact span::before {
-    content: url("./imagenes/Contact.png");
+    content: url("https://i.imgur.com/FQWxEY4.png");
     display: inline-block;
     border-radius: 30px;
     position: relative;
