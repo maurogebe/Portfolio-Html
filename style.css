@@ -64,7 +64,6 @@ header {
     transition: right 0.3s, color 1s;
 }
 .nav__menu li:hover {
-    border-radius: 0px 50px 50px 0px;
     background-color: var(--color-principal);
 }
 .nav__menu i {
@@ -82,6 +81,10 @@ header {
         transition: left 1s;
         height: 0;
         width: 100%;
+        z-index: 999;
+    }
+    .active {
+        background-color: transparent!important;
     }
     .nav {
         height: 0;
@@ -92,6 +95,7 @@ header {
         padding-top: 60px;
         height: 100vh;
         background-color: var(--color-grey);
+        transition: all 1s;
     }
     .nav__menu-toggle {
         height: 0;
@@ -100,6 +104,16 @@ header {
         display: inline-block;
         position: fixed;
         top: 20px;
+        right: 21px;
+        width: 50px;
+        height: 40px;
+        border-radius: 5px;
+        border: 0;
+        background-color: var(--color-grey);
+        color: white;
+        z-index: 1;
+        cursor: pointer;
+        outline: none;
     }
     .animation__menu-toggle {
         left: 0!important;
@@ -111,6 +125,13 @@ header {
     .nav__menu h4 {
         color: white;
         right: revert;
+    }
+    .nav__menu li:hover {
+        background-color: transparent!important;
+    }
+    .nav__menu li:hover h4 {
+        background: transparent!important;
+        right: revert!important;
     }
     
 }
@@ -264,3 +285,5 @@ header {
 
 
 /* Page About */
+
+/* Section 1 */

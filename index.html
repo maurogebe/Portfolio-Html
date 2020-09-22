@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f351a94cb0.js" crossorigin="anonymous"></script>
-    <!-- <script src="./JS.js"></script> -->
+    <script src="./JS.js"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Home</title>
-    <script>
-        function displayMenuToggle() {
-            var menu = document.getElementById('menuToggle')
-            menu.classList.toggle('animation__menu-toggle')
-        }
-    </script>
 </head>
 <body>
     <header>
         <nav class="nav">
             <div class="nav__menu-toggle">
-                <button oneclick="displayMenuToggle()">
+                <button onclick="displayMenuToggle()">
                     Menu
                 </button>
                 <ul class="nav__menu" id="menuToggle">
