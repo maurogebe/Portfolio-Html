@@ -1,5 +1,6 @@
 :root {
     --color-principal: #8A0808;
+    --color-grey: #2b2a2a;
 }
 * {
     margin: 0;
@@ -10,7 +11,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #fff;
     background: #111;
-    width: 80%;
+    width: 95%;
 }
 
 /* Header */
@@ -19,8 +20,8 @@ header {
     right: 20px;
     top: 20%;
 }
-.nav {
-    
+.nav__menu-toggle > button {
+    display: none;
 }
 .nav__menu {
     list-style: none;
@@ -39,18 +40,8 @@ header {
     display: flex;
     align-items: center;
 }
-/* .nav__menu a {
-    text-decoration: none;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    background-color: #2b2a2a;
-    margin-top: 10px;
-    border-radius: 50px;
-    padding-top: 10px;
-} */
 .active {
-    background-color: var(--color-principal);
+    background-color: var(--color-principal)!important;
 }
 .nav__menu h4 {
     color: transparent;
@@ -63,8 +54,9 @@ header {
     border-radius: 50px 0 0 50px;
     padding-bottom: 32%;
     background-color: var(--color-principal) rgba(0, 0, 0, 0);
+    transition: all 0.2s;
 }
-.nav__menu a:hover h4 {
+.nav__menu li:hover h4 {
     display: inline-block;
     color: white;
     background: var(--color-principal);
@@ -75,41 +67,58 @@ header {
     border-radius: 0px 50px 50px 0px;
     background-color: var(--color-principal);
 }
-.nav__menu-home span::before {
-    content: url("https://i.imgur.com/I9mFSdh.png");
-    display: inline-block;
-    border-radius: 30px;
-    position: relative;
-    right: 2px;
+.nav__menu i {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-.nav__menu-about span::before {
-    content: url("https://i.imgur.com/TIkXgl2.png");
-    display: inline-block;
-    border-radius: 30px;
-    position: relative;
-    right: 2px;
+
+/* Responsive del Header */
+@media only screen and (max-width: 990px) {
+    header {
+        left: 0;
+        right: revert;
+        top: 0;
+        transition: left 1s;
+        height: 0;
+        width: 100%;
+    }
+    .nav {
+        height: 0;
+    }
+    .nav__menu {
+        position: relative;
+        left: -100%;
+        padding-top: 60px;
+        height: 100vh;
+        background-color: var(--color-grey);
+    }
+    .nav__menu-toggle {
+        height: 0;
+    }
+    .nav__menu-toggle > button {
+        display: inline-block;
+        position: fixed;
+        top: 20px;
+    }
+    .animation__menu-toggle {
+        left: 0!important;
+        transition: left 1s;
+    }
+    .nav__menu li {
+        
+    }
+    .nav__menu h4 {
+        color: white;
+        right: revert;
+    }
+    
 }
-.nav__menu-portfolio span::before {
-    content: url("https://i.imgur.com/f5cNIU1.png");
-    display: inline-block;
-    border-radius: 30px;
-    position: relative;
-    right: 2px;
-}
-.nav__menu-contact span::before {
-    content: url("https://i.imgur.com/FQWxEY4.png");
-    display: inline-block;
-    border-radius: 30px;
-    position: relative;
-    right: 2px;
-}
-.nav__menu-blog span::before {
-    content: url("./imagenes/Home.png");
-    display: inline-block;
-    border-radius: 30px;
-    position: relative;
-    right: 2px;
-}
+
+
+
+
+/* Page Home */
 
 /* Imagen */
 .home__background-dinamic {
@@ -122,11 +131,18 @@ header {
     top: -50%;
 }
 
+/* Responsive de Imagen */
+@media only screen and (max-width: 990px) {
+    .home__background-dinamic {
+        display: none!important;
+    }
+}
+
 /* Contenido home */
 .home__content-1 {
     /* width: 100%; */
     height: 100vh;
-    position: relative;
+    /* position: relative; */
     display: flex;
     align-items: center;
 }
@@ -140,6 +156,7 @@ header {
     margin-left: 30px;
     background-position: top center;
     box-shadow: 0px 0px 10px black;
+    position: relative;
 }
 .content-1__description {
     width: 50%;
@@ -149,3 +166,101 @@ header {
 .content-1__description-personal {
     width: 80%;
 }
+.content-1__description-personal > span {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+.content-1__description-personal > h1 {
+    margin-bottom: 1rem;
+    font-size: xx-large;
+}
+.description__personal-title-name {
+    color: var(--color-principal);
+}
+.content-1__description-personal > p {
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+}
+.description__personal-button {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-principal);
+    width: 200px;
+    height: 40px;
+    border-radius: 20px
+}
+.description__personal-button > i {
+    position: absolute;
+    right: 25%;
+    color: transparent;
+    font-size: 13px;
+    bottom: 15px;
+    transition: all 0.5s;
+}
+.description__personal-button a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    right: 0;
+    transition: all 0.5s;
+}
+.content-1__description-button span {
+    
+}
+.description__personal-button:hover i {
+    right: 30px;
+    color: white;
+    transition: all 0.5s;
+}
+.description__personal-button:hover a {
+    right: 13px;
+    transition: right 0.5s;
+}
+
+/* Responsive de Contenido Home */
+@media only screen and (max-width: 990px) {
+    body {
+        width: 100%;
+    }
+    .home__content-1 {
+        flex-direction: column;
+    }
+    .content-1__img-personal {
+        background-image: url("https://i.imgur.com/zDTbwnX.jpg");
+        width: 230px;
+        height: 230px;
+        border: 2px solid var(--color-grey);
+        border-radius: 50%;
+        margin: 50px 0px 2rem 0;
+        position: static;
+    }
+    .content-1__description {
+        width: 75%;
+    }
+    .content-1__description-personal {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-1__description-personal > span {
+        display: none!important;
+    }
+    .content-1__description-personal > p {
+        text-align: center;
+    }
+    .description__personal-button a {
+    }
+}
+
+
+
+
+
+
+
+/* Page About */
